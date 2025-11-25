@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domino Club AR</title>
+    <title>Domino Club</title>
+    
+    <style>
+        body {
+            /* Asegura que la página tome toda la altura y el contenido se centre */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 100% del viewport height */
+            background-color: #f0f0f0; /* Color de fondo suave */
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        #splash-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo simple para el Spinner (un punto que gira) */
+        .spinner {
+            border: 4px solid #f3f3f3; /* Gris claro */
+            border-top: 4px solid #007bff; /* Azul/Color principal de tu app */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <script type="application/javascript" src="composeApp.js"></script>
-</head>
+    </head>
 <body>
+    <div id="splash-container">
+        <div class="spinner"></div>
+        <h1>Cargando Domino Club...</h1>
+        <p>Prepara tus fichas.</p>
+    </div>
+
+    <script type="application/javascript" src="composeApp.js"></script>
 </body>
 </html>
